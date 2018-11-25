@@ -1,0 +1,31 @@
+{
+  "name": "turp",
+  "version": "0.0.0",
+  "description": "",
+  "main": "turp.sass",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-sass": "node-sass --output-style expanded --source-map true turp.sass css/turp.css",
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/secildogan/turp.git"
+  },
+  "keywords": [
+    "css",
+    "sass",
+    "framework",
+    "responsive",
+    "components",
+    "layout"
+  ],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/secildogan/turp/issues"
+  },
+  "homepage": "https://github.com/secildogan/turp#readme",
+  "devDependencies": {
+    "node-sass": "^4.10.0"
+  }
+}
