@@ -1,0 +1,70 @@
+* {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+body { margin: 0; }
+
+.container {
+  width: calc(100vw - 40px);
+  max-width: 1152px;
+  margin: 0 auto;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  flex-wrap: wrap;
+
+  * {
+    column-break-inside: avoid;
+    -moz-column-break-inside: avoid;
+    -webkit-column-break-inside: avoid;
+  }
+}
+
+.vertical { flex-direction: column; }
+
+.start { justify-content: flex-start; }
+.end { justify-content: flex-end; }
+.center { justify-content: center; }
+.separated { justify-content: space-between; }
+.spaced { justify-content: space-around; }
+.spaced-evenly { justify-content: space-evenly; }
+
+.items-start { align-items: flex-start; }
+.items-end { align-items: flex-end; }
+.items-center { align-items: center; }
+
+@for $i from 1 through 100 {
+  .container.tile#{$i} { display: block; column-count: #{$i}; &>div { width: 100%; } }
+  .w#{$i}, .container > div.w#{$i} { width: "#{$i}%;" }
+  .h#{$i}, .container > div.h#{$i} { height: "#{$i}%;" }
+  .off#{$i}, .container > div.off#{$i} { margin-left: "#{$i}%;" }
+  .flex#{$i}, .container > div.flex#{$i} { flex: "#{$i};" }
+}
+
+/* break points */
+$breakpoints-shifted: (
+  xs: 0px,
+  sm: map-get($breakpoints, xs),
+  md: map-get($breakpoints, sm),
+  lg: map-get($breakpoints, md),
+  xl: map-get($breakpoints, lg)
+);
+
+@each $bp, $bpval in $breakpoints-shifted {
+  @media (min-width: $bpval) {
+    @for $i from 1 through 100 {
+      .container.#{$bp}-tile#{$i} { display: block; column-count: #{$i}; &>div { width: 100%; } }
+      .#{$bp}-w#{$i}, .#{$bp}-flex.container > div.#{$bp}-w#{$i}, .container > div.#{$bp}-w#{$i} { width: $i * 1%; }
+      .#{$bp}-h#{$i}, .#{$bp}-flex.container > div.#{$bp}-h#{$i}, .container > div.#{$bp}-h#{$i} { height: $i * 1%; }
+      .#{$bp}-off#{$i}, .#{$bp}-flex.container > div.#{$bp}-off#{$i}, .container > div.#{$bp}-off#{$i} { margin-left: $i * 1px; }
+      .#{$bp}-flex#{$i}, .#{$bp}-flex.container > div.#{$bp}-flex#{$i}, .container > div.#{$bp}-flex#{$i} { flex: $i; }
+    }
+
+    .#{$bp}-flex, .container.#{$bp}-flex, div.#{$bp}-flex, div.container.#{$bp}-flex { display: flex; }
+  }
+}

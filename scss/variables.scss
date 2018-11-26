@@ -1,0 +1,49 @@
+/* used for margin, padding, border etc */
+$gaps: (
+  g1: 3px,
+  g2: 5px,
+  g3: 10px,
+  g4: 15px,
+  g5: 20px,
+  g6: 30px,
+  g7: 40px,
+  g8: 50px,
+  g9: 75px,
+  g10: 100px
+);
+
+/* dark colors */
+$c1: #007373;
+$c2: #146175;
+
+/* font sizes */
+$font-sizes: (
+  t1: 64px,
+  t2: 32px,
+  t3: 24px,
+  t4: 18px,
+  t5: 16px,
+  t6: 14px
+);
+
+/* font families */
+$serif: Merriweather;
+$sans-serif: Lato;
+
+/* break points */
+$breakpoints: (
+  xs: 576px,
+  sm: 768px,
+  md: 992px,
+  lg: 1200px,
+  xl: 1440px
+);
+
+/*$primary: $turquoise;
+$link: $blue;
+$info: $cyan;
+$success: $green;
+$warning: $yellow;
+$danger: $red;
+$dark: $grey-darker;
+$text: $grey-dark;*/

@@ -5,7 +5,7 @@
   "main": "turp.sass",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build-sass": "node-sass --output-style expanded --source-map true turp.sass css/turp.css",
+    "build-sass": "node-sass --output-style expanded --source-map true turp.sass css/turp.css"
   },
   "repository": {
     "type": "git",
