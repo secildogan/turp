@@ -34,16 +34,19 @@
   .pl#{$i} { padding-left: map-get($gaps, g#{$i}); }
   .pr#{$i} { padding-right: map-get($gaps, g#{$i}); }
   .pb#{$i} { padding-bottom: map-get($gaps, g#{$i}); }
+  .pt#{$i} { padding-top: map-get($gaps, g#{$i}); }
 
   .m#{$i} { margin: map-get($gaps, g#{$i}); }
   .ml#{$i} { margin-left: map-get($gaps, g#{$i}); }
   .mr#{$i} { margin-right: map-get($gaps, g#{$i}); }
   .mb#{$i} { margin-bottom: map-get($gaps, g#{$i}); }
+  .mt#{$i} { margin-top: map-get($gaps, g#{$i}); }
 
   .b#{$i} { border: map-get($gaps, g#{$i}); }
   .bl#{$i} { border-left: map-get($gaps, g#{$i}); }
   .br#{$i} { border-right: map-get($gaps, g#{$i}); }
   .bb#{$i} { border-bottom: map-get($gaps, g#{$i}); }
+  .bt#{$i} { border-top: map-get($gaps, g#{$i}); }
 }
 
 /* border radius */

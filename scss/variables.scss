@@ -39,11 +39,30 @@ $breakpoints: (
   xl: 1440px
 );
 
-/*$primary: $turquoise;
-$link: $blue;
-$info: $cyan;
-$success: $green;
-$warning: $yellow;
-$danger: $red;
-$dark: $grey-darker;
-$text: $grey-dark;*/
+$c-default: #4D5061;
+$c-primary: #FA9A91;
+$c-link: #45B2E8;
+$c-info: #45B2E8;
+$c-success: #3ECF8E;
+$c-warning: #F5BB00;
+$c-danger: #C03221;
+$c-text: #525F7F;
+$c-white: #FFF;
+
+$c-primary-light: lighten($c-primary, 20%);
+$c-link-light: lighten($c-link, 20%);
+$c-info-light: lighten($c-info, 20%);
+$c-success-light: lighten($c-success, 20%);
+$c-warning-light: lighten($c-warning, 20%);
+$c-danger-light: lighten($c-danger, 20%);
+$c-text-light: lighten($c-text, 20%);
+$c-white-light: lighten($c-white, 20%);
+
+$c-primary-dark: darken($c-primary, 20%);
+$c-link-dark: darken($c-link, 20%);
+$c-info-dark: darken($c-info, 20%);
+$c-success-dark: darken($c-success, 20%);
+$c-warning-dark: darken($c-warning, 20%);
+$c-danger-dark: darken($c-danger, 20%);
+$c-text-dark: darken($c-text, 20%);
+$c-white-dark: darken($c-white, 20%);
